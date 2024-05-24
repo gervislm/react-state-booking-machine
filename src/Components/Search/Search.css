@@ -14,3 +14,7 @@
 .Search-continue {
   margin-left: auto;
 }
+
+.Search-continue:disabled {
+  opacity: 20%;
+}

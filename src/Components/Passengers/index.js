@@ -18,41 +18,40 @@ export const Passengers = ({ state, send }) => {
     changeValue("");
   };
 
-  const list = [];
+  const { passengers } = state.context;
 
   return (
     <form onSubmit={submit} className="Passengers">
       <p className="Passengers-title title">
-        Agrega a las personas que van a volar ✈️
+        Add people who are going to fly ✈️
       </p>
-      <ul>
-        {list.map((value) => (
-          <li>{value}</li>
-        ))}
-      </ul>
+
+      {passengers.map((person, idx) => (
+        <p className="Passenger-name" key={`person-${idx}`}>
+          - {person}
+        </p>
+      ))}
+
       <input
         id="name"
         name="name"
         type="text"
-        placeholder="Escribe el nombre completo"
+        placeholder="Write full name"
         required
+        autoComplete="name"
         value={value}
         onChange={onChangeInput}
       />
       <div className="Passengers-buttons">
-        <button
-          onClick={(value) => list.push(value) && console.log(list)}
-          className="Passengers-add button-secondary"
-          type="submit"
-        >
-          Agregar Pasajero
+        <button className="Passengers-add button-secondary" type="submit">
+          Add Passenger
         </button>
         <button
           onClick={goToTicket}
           className="Passenger-pay button"
           type="button"
         >
-          Ver mi ticket
+          View my ticket
         </button>
       </div>
     </form>

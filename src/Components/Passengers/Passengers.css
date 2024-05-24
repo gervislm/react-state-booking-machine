@@ -24,6 +24,17 @@
   margin-top: 8px;
 }
 
+button.Passenger-pay:disabled {
+  opacity: 20%;
+}
+
 .Passengers-title {
   margin-bottom: 16px;
+}
+
+.Passenger-name {
+  font-size: 1rem;
+  margin: 4px 0;
+  width: 100%;
+  text-align: left;
 }

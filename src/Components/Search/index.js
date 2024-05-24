@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Search.css";
 
-export const Search = ({ send }) => {
+export const Search = ({ send, state }) => {
   const [flight, setFlight] = useState("");
 
   const goToPassengers = () => {
@@ -12,7 +12,7 @@ export const Search = ({ send }) => {
     setFlight(event.target.value);
   };
 
-  const options = ["Mexico", "Venezuela", "Colombia"];
+  const { countries } = state.context;
 
   return (
     <div className="Search">
@@ -20,15 +20,17 @@ export const Search = ({ send }) => {
       <select
         id="country"
         className="Search-select"
+        autoComplete="country"
         value={flight}
         onChange={handleSelectChange}
+        required
       >
         <option value="" disabled defaultValue>
           Select a Country
         </option>
-        {options.map((option) => (
-          <option value={option} key={option}>
-            {option}
+        {countries.map((country) => (
+          <option value={country.name.common} key={country.name.common}>
+            {country.name.common}
           </option>
         ))}
       </select>

@@ -47,6 +47,8 @@
 }
 
 .Tickets-passengers p {
+  text-align: start;
+  font-size: 1rem;
   margin: 2px;
 }
 
