@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-state-booking-machine/static/css/main.709096b5.css",
+    "main.js": "/react-state-booking-machine/static/js/main.47626e66.js",
+    "static/media/background-travel-2.jpg": "/react-state-booking-machine/static/media/background-travel-2.1b3bc05ab3ab53a29ab2.jpg",
+    "index.html": "/react-state-booking-machine/index.html",
+    "main.709096b5.css.map": "/react-state-booking-machine/static/css/main.709096b5.css.map",
+    "main.47626e66.js.map": "/react-state-booking-machine/static/js/main.47626e66.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.709096b5.css",
+    "static/js/main.47626e66.js"
+  ]
+}
